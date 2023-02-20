@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mailapp:
+    image: asabhi6776/mail_test:latest
+    container_name: mail_app
+    working_dir: /code
+    restart: always
+    ports:
+      - 5005:5000
+    entrypoint: flask run --host=0.0.0.0
